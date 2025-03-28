@@ -3,12 +3,13 @@ import "./App.css";
 import { Button } from "./components/ui/button";
 import AppLayout from "./layout/app-layout";
 import LandingPage from "./pages/landing";
-import Onboarding from "./pages/onborading";
+import Onboarding from "./pages/onboarding";
 import Jobs from "./pages/job";
 import Postjobs from "./pages/postjobs";
 import Savejobs from "./pages/savejobs";
 import JobListing from "./pages/jobListing";
 import { ThemeProvider } from "./components/ui/theme-provider";
+import ProtectedRoute from "./components/ui/protectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -20,27 +21,48 @@ const router = createBrowserRouter([
       },
       {
         path: "/onboarding",
-        element: <Onboarding />,
+
+        element: (
+          <ProtectedRoute>
+            <Onboarding />
+          </ProtectedRoute>
+        ),
       },
 
       {
         path: "/jobs",
-        element: <Jobs />,
+        element: (
+          <ProtectedRoute>
+            <Jobs />,
+          </ProtectedRoute>
+        ),
       },
 
       {
         path: "/jobs{id}",
-        element: <JobListing />,
+        element: (
+          <ProtectedRoute>
+            <JobListing />,
+          </ProtectedRoute>
+        ),
       },
 
       {
         path: "/postjobs",
-        element: <Postjobs />,
+        element: (
+          <ProtectedRoute>
+            <Postjobs />,
+          </ProtectedRoute>
+        ),
       },
 
       {
         path: "/savedjobs",
-        element: <Savejobs />,
+        element: (
+          <ProtectedRoute>
+            <Savejobs />,
+          </ProtectedRoute>
+        ),
       },
     ],
   },

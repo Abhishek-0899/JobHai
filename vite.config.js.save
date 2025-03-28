@@ -1,0 +1,83 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import path from "path"
+import tailwindcss from "@tailwindcss/vite"
+import react from "@vitejs/plugin-react-swc"
+import { defineConfig } from "vite"
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+=======
+import path from "path"
+import tailwindcss from "@tailwindcss/vite"
+import react from "@vitejs/plugin-react-swc"
+import { defineConfig } from "vite"
+=======
+import path from "path";
+import { fileURLToPath } from "url";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react-swc";
+import { defineConfig } from "vite";
+
+// Resolve __dirname for ES modules
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+>>>>>>> 229914c (onbarding)
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+
+`  },
+<<<<<<< HEAD
+>>>>>>> 0d3269e (first)
+})
+=======
+});
+>>>>>>> 229914c (onbarding)
+T
+
+^T
+
+
+
+^X
+:wq
+git
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Exit
+
